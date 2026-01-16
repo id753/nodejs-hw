@@ -4,7 +4,7 @@ const notesSchema = new Schema(
   {
     title: {
       type: String,
-      required: true, // Исправлено: добавлена 'd'
+      required: true,
       trim: true,
     },
     content: {
@@ -30,10 +30,9 @@ const notesSchema = new Schema(
     },
   },
   {
-    timestamps: true, // Добавляет createdAt и updatedAt автоматически
+    timestamps: true,
     versionKey: false, // Убирает поле __v
   },
 );
 
-// Исправлено: имя модели теперь совпадает по смыслу с заметками
-export const Note = model('note', notesSchema);
+export const Note = model('Note', notesSchema);
