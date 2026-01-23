@@ -21,7 +21,7 @@ const notesSchema = new Schema(
   },
   {
     timestamps: true,
-    versionKey: false, // Убирает поле __v
+    versionKey: false, // Убирает поле _v
   },
 );
 

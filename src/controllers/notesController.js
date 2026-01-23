@@ -1,10 +1,7 @@
-// import { TAGS } from '../constants/tags.js';
 import { Note } from '../models/note.js';
 import createHttpError from 'http-errors';
 
 export const getAllNotes = async (req, res) => {
-  // const notes = await Note.find();
-  // res.status(200).json(notes);
   const { page = 1, perPage = 10, search, tag } = req.query;
   const skip = (page - 1) * perPage;
 
